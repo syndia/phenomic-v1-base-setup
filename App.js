@@ -2,6 +2,8 @@ import React from 'react'
 import { Router, Route, browserHistory } from 'react-router'
 import { createApp } from '@phenomic/preset-react-app/lib/client'
 
+import Html from './components/Html'
+
 import BlogPostContainer from './components/BlogPostContainer'
 import HomeContainer from './components/HomeContainer'
 
@@ -11,4 +13,4 @@ export default createApp(() => (
     <Route path="/after/:after" component={ HomeContainer } />
     <Route path="/blog/*" component={ BlogPostContainer } collection="posts" />
   </Router>
-))
+), Html)

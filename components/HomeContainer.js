@@ -1,10 +1,15 @@
-import React from 'react'
+import React from "react"
+import Head from "react-helmet"
 import { createContainer, query, BodyRenderer } from "@phenomic/preset-react-app/lib/client"
 
 import { Link } from "react-router"
 
 const Home =  ({ posts }) => (
   <div>
+    <Head>
+      <title>Hello world</title>
+      <meta name="description" content="Everything is awaysome!" />
+    </Head>
     <h1>Home</h1>
     <ul>
       { posts && posts.node && posts.node.list &&
