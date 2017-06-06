@@ -15,11 +15,17 @@ const Home =  ({ posts }) => (
         ))
       }
     </ul>
+    <p>
+      {
+        posts && posts.node && posts.node.hasNextPage &&
+        <Link to={ `/after/${ posts.node.next }`}>Older posts</Link>
+      }
+    </p>
   </div>
 )
 
 const HomeContainer = createContainer(Home, (props) => ({
-  posts: query({ collection: "posts" }),
+  posts: query({ collection: "posts", limit: 5, after: props.params.after }),
 }))
 
 export default HomeContainer

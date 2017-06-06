@@ -8,6 +8,7 @@ import HomeContainer from './components/HomeContainer'
 export default createApp(() => (
   <Router history={ browserHistory }>
     <Route path="/" component={ HomeContainer } />
+    <Route path="/after/:after" component={ HomeContainer } />
     <Route path="/blog/*" component={ BlogPostContainer } collection="posts" />
   </Router>
 ))
