@@ -1,3 +1,7 @@
+---
+title: "First post"
+---
+
 # This is a [Markdown](https://en.wikipedia.org/wiki/Markdown#Example) file
 
 If you are new to Markdown, you might want to check those links:
